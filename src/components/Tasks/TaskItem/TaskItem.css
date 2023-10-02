@@ -10,8 +10,9 @@
 }
 
 .task-item.complete {
-  opacity: .4;
+  opacity: .3;
 }
+
 
 .task-item input {
   margin-right: 15px;
