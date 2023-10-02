@@ -1,0 +1,50 @@
+.task-item {
+  margin: 1rem 0;
+  background: #8b005d;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  color: white;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.task-item.complete {
+  opacity: .4;
+}
+
+.task-item input {
+  margin-right: 15px;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+.task-item .checked::before {
+  content: '\2714';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8b005d;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.task-item button {
+  margin-left: auto;
+}
+
