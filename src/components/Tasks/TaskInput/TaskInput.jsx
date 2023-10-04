@@ -1,34 +1,34 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 
 import Button from "../../UI/Button/Button";
-// import "./TaskInput.css";
+import styles from "./TaskInput.module.css";
 
-const FormControl = styled.div`
-  margin: 0.5rem 0;
+// const FormControl = styled.div`
+//   margin: 0.5rem 0;
 
-  & label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 0.5rem;
-    color: ${props => props.isValid ? "black" : "red"  }
-  }
+//   & label {
+//     font-weight: bold;
+//     display: block;
+//     margin-bottom: 0.5rem;
+//     color: ${props => props.isValid ? "black" : "red"  }
+//   }
 
-  & input {
-    display: block;
-    width: 100%;
-    border: 1px solid ${({isValid}) => isValid ? "#ccc" : "red"};
-    font: inherit;
-    line-height: 1.5rem;
-    padding: 0 0.25rem;
-    background-color: ${({isValid}) => isValid ? "transparent" : "samon"}
-  }
+//   & input {
+//     display: block;
+//     width: 100%;
+//     border: 1px solid ${({isValid}) => isValid ? "#ccc" : "red"};
+//     font: inherit;
+//     line-height: 1.5rem;
+//     padding: 0 0.25rem;
+//     background-color: ${({isValid}) => isValid ? "transparent" : "salmon"}
+//   }
 
-  & input:focus {
-    outline: none;
-  }
-`;
+//   & input:focus {
+//     outline: none;
+//   }
+// `;
 
 const CourseInput = (props) => {
   const [enteredValue, setEnteredValue] = useState("");
@@ -54,7 +54,8 @@ const CourseInput = (props) => {
 
   return (
     <form onSubmit={formSubmitHandler}>
-      <FormControl isValid={isValid}>
+      {/* <FormControl isValid={isValid}> */}
+      <div className={`${styles['form-control']} ${!isValid && styles.invalid}`}>
         <label>
           What will you do today?
         </label>
@@ -63,7 +64,8 @@ const CourseInput = (props) => {
           onChange={InputChangeHandler}
           value={enteredValue}
         />
-      </FormControl>
+        </div>
+      {/* </FormControl> */}
       <Button type="submit">Add Task</Button>
     </form>
   );
