@@ -17,7 +17,7 @@ const TaskItem = (props) => {
         onClick={() => props.onCompleteTask(props.id)}
       />
       {props.children}
-      <Button onClick={deleteHandler}>Delete</Button>
+      <Button type={'button'} onClick={deleteHandler}>Delete</Button>
     </li>
   );
 };
