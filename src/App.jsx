@@ -28,7 +28,6 @@ const App = () => {
     }
     );
     setCompletedTasksNumber(lastValue => lastValue + 1);
-    console.log(completedTasksNumber)
   };
 
   const deleteItemHandler = (clickedId) => {
