@@ -13,7 +13,7 @@ const TaskItem = (props) => {
       <input
         type="checkbox"
         name="completed-task"
-        className={props.completed && "checked"}
+        className={props.completed ? "checked" : ''}
         onClick={() => props.onCompleteTask(props.id)}
       />
       {props.children}
